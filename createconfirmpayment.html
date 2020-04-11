@@ -7,6 +7,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<title>Confirm Event</title>
+<script>
+function sum() {
+      var txtFirstNumberValue = document.getElementById('txt1').value;
+      var txtSecondNumberValue = document.getElementById('txt2').value;
+      var result = parseInt(txtFirstNumberValue) - parseInt(txtSecondNumberValue);
+      if (!isNaN(result)) {
+         document.getElementById('txt3').value = result;
+      }
+}
+</script>
 <style type="text/css">
 body {
 background: url(img/konser.jpg) no-repeat fixed;
@@ -17,6 +27,7 @@ background: url(img/konser.jpg) no-repeat fixed;
 }
 </style>
 </head>
+
 <body>
 	<div class="p-3 mb-2 bg-dark text-white">
   <ul class="nav justify-content-end">
@@ -60,16 +71,16 @@ background: url(img/konser.jpg) no-repeat fixed;
 			<td><input class="form-control form-control-sm" type="date" disabled="" placeholder="Rp."></td>
 		</tr>
 		<tr>	
-			<td style="color: white;">Biaya</td>
-			<td><input class="form-control form-control-sm" type="text"></td>
+			<td style="color: white;">Bayar</td>
+			<td><input class="form-control form-control-sm" type="text" id="txt1"  onkeyup="sum();"></td>
 		</tr>
 		<tr>	
-			<td style="color: white;">Bayar</td>
-			<td><input class="form-control form-control-sm" type="text"></td>
+			<td style="color: white;">Biaya</td>
+			<td><input class="form-control form-control-sm" type="text" id="txt2"  onkeyup="sum();"></td>
 		</tr>
 		<tr>
-			<td></td>
-		<td><input class="form-control form-control-sm" type="text">
+			<td style="color: white;">Kembalian</td>
+		<td><input class="form-control form-control-sm" type="text" id="txt3" disabled="">
 				</td>
 		</tr>
 		<tr>	
